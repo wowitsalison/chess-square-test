@@ -1,10 +1,12 @@
 import random
 
+# Represent square on a board
 class Square:
     def __init__(self, row, column):
         self.row = row
         self.column = column
 
+# Map columns to numbers
 columns = {
     "a": 1,
     "b": 2,
@@ -15,15 +17,18 @@ columns = {
     "g": 7,
     "h": 8
 }
-# Add this reverse mapping for display
+
+# Reverse mapping for columns
 columns_rev = {v: k for k, v in columns.items()}
 
+# Determine the color of the square
 def check_color(square):
     if (square.row + square.column) % 2 == 0:
         return "black"
     else:
         return "white"
 
+# Quiz logic
 def quiz():
     fails = 0
     print("type 'w' for white and 'b' for black.")
