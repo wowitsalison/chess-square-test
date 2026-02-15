@@ -59,7 +59,7 @@ class Example(tk.Frame):
             if self.fails >= self.max_fails:
                 self.white_btn.config(state="disabled")
                 self.black_btn.config(state="disabled")
-                self.output.config(text="Game over! You have failed 3 times.", fg="red")
+                self.output.config(text="Game over!", fg="red")
 
 if __name__ == "__main__":
     root = tk.Tk()
